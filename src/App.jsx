@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Movies from "./components/Movies";
 import WatchList from "./components/WatchList";
 import Banner from "./components/Banner";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 const App = () => {
   let [watchList, setWatchList] = useState([]);
@@ -13,7 +13,6 @@ const App = () => {
     setWatchList((prev) => {
       const updatedList = [...prev, movieObj];
       localStorage.setItem("movie", JSON.stringify(updatedList));
-      console.log(watchList);
       return updatedList;
     });
   };
@@ -38,6 +37,8 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          {/* Default Route to redirect to /Movies */}
+          <Route path="/" element={<Navigate to="/Movies" replace />} />
           <Route path="/watchList" element={<WatchList watchList={watchList} setWatchList={setWatchList} />} />
           <Route
             path="/Movies"
