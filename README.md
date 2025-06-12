@@ -6,7 +6,7 @@
 [![Netlify](https://img.shields.io/badge/Netlify-Deployed-00C7B7)](https://www.netlify.com/)
 
 ## 🚀 Live Demo
-[View the application](https://barshaimdb.netlify.app/Movies)
+[View the application]([https://barshaimdb.netlify.app/Movies](https://barshaimdb.netlify.app/Movies))
 
 ## 📝 Overview
 A sophisticated React application built with Vite that provides an immersive movie browsing experience. Users can explore movies, manage their watchlist, and enjoy a seamless, responsive interface powered by modern web technologies.
